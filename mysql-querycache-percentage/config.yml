@@ -1,0 +1,5 @@
+mysql:
+  host: localhost
+  user: example_user
+  password: example_pass
+  db: example_db
