@@ -31,7 +31,7 @@ config = YAML.load_file("#{dir}/config.yml")
 using_column = ['Com_select', 'Qcache_hits']
 
 now = Time.now.to_i
-cmd_result = `mysql -h#{config['mysql']['host']} -u#{config['mysql']['user']} -p#{config['mysql']['password']} #{config['mysql']['db']}  -e"SHOW STATUS WHERE Variable_name = 'Com_select' || Variable_name = 'Qcache_hits' || Variable_name = 'Qcache_lowmem_prunes'"`
+cmd_result = `mysql -h#{config['mysql']['host']} -u#{config['mysql']['user']} -p#{config['mysql']['password']}  -e"SHOW STATUS WHERE Variable_name = 'Com_select' || Variable_name = 'Qcache_hits' || Variable_name = 'Qcache_lowmem_prunes'"`
 #puts cmd_result
 
 
